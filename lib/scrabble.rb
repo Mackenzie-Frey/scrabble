@@ -29,13 +29,15 @@ class Scrabble
       end
       @element_array.sum
     end
+
+    # Need to have the element array name differently.
+    # Aka set equal to a different variable
   end
 
   def score_with_multipliers(word, letter_multiplier, word_multiplier = nil)
-    @element_array.map do |i|
-      i * # each element of letter_multiplier 
-    end
+      @element_array.zip(letter_multiplier).map do |x, y|
+        x * y
+      end
   end
-
 
 end

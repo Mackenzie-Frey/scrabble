@@ -23,15 +23,11 @@ class Scrabble
     elsif letter.length == 1
       @point_values[letter.upcase]
     else
-
      element_array = letter.upcase.chars.map do |element|
         @point_values[element]
       end
-      element_array.size do |element|
-          sum += element
-      end
-
+      element_array.sum
     end
-
   end
+
 end

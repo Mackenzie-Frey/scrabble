@@ -1,4 +1,5 @@
 require 'pry'
+
 class Scrabble
 
   def initialize
@@ -23,11 +24,18 @@ class Scrabble
     elsif letter.length == 1
       @point_values[letter.upcase]
     else
-     element_array = letter.upcase.chars.map do |element|
+     @element_array = letter.upcase.chars.map do |element|
         @point_values[element]
       end
-      element_array.sum
+      @element_array.sum
     end
   end
+
+  def score_with_multipliers(word, letter_multiplier, word_multiplier = nil)
+    @element_array.map do |i|
+      i * # each element of letter_multiplier 
+    end
+  end
+
 
 end
